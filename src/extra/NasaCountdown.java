@@ -17,13 +17,15 @@ import javax.swing.JOptionPane;
 public class NasaCountdown {
 	public static void main(String[] args) {
 		// 2. Use a pop-up to ask the user where to start counting from
-		JOptionPane.showInputDialog ("Who do you want to vote for");	
+	String	countdown= JOptionPane.showInputDialog("Where do you want me to count down from?");
 		// 3. Change the countdown to use the new starting point
-		
+	int num=	Integer.parseInt(countdown);
 		// 1. Print a countdown from 10 to 0 on the console
-             for (int i = 10; i >= 0; i--) {
+             for (int i = num; i > 0; i--) {
 				System.out.println(i);
+				speak(i+"");
 			}
+             speak("blastoff");
 		// 4. Use the speak method to hear the countdown.
 		
 		// 5. when the counting is done, speak "blastoff!"
